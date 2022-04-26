@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "1571d7a5-61e4-4d76-83ef-23e25cd034ef",
+		"name": "Gorest Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"List of posts is not empty\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.legth).to.not.eql(0);",
+							"}); ",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0].id).to.eql(1277);",
+							"});",
+							"",
+							"const schema = {",
+							"    \"type\": \"array\",",
+							"    \"minItems\": 1,",
+							"    \"items\": [",
+							"        {",
+							"            \"type\": \"object\",",
+							"            \"properties\": {",
+							"                \"id\": {",
+							"                    \"type\": \"integer\"",
+							"                },",
+							"                \"user_id\": {",
+							"                    \"type\": \"integer\"",
+							"                },",
+							"                \"title\": {",
+							"                    \"type\": \"string\"",
+							"                },",
+							"                \"body\": {",
+							"                    \"type\": \"string\"",
+							"                }",
+							"            },",
+							"            \"required\": [",
+							"                \"id\",",
+							"                \"user_id\",",
+							"                \"title\",",
+							"                \"body\"",
+							"            ]",
+							"        }",
+							"      ]",
+							"};",
+							"",
+							"pm.test(\"Schema is valid\", function() {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(tv4.validate(jsonData, schema)).to.be.true;",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/posts",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

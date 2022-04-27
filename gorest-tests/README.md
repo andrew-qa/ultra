@@ -5,10 +5,10 @@ This suite is covering https://gorest.co.in/public/v2/posts/ endpoint using Post
 ## Use
 
 1. launch Postman 
-1. open "Collections" tab
-1. click "Import" button and choose `Gorest_Test.postman_collection.json`
-1. set proper API token for the "Gorest Test" collection (collection->Auth tab, Auth Type: Bearer Token) 
-1. run tests for the collection
+2. open "Collections" tab
+3. click "Import" button and choose `Gorest_Test.postman_collection.json`
+4. set proper API token for the "Gorest Test" collection (collection->Auth tab, Auth Type: Bearer Token) 
+5. run tests for the collection
 
 ## More info
 

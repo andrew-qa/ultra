@@ -498,7 +498,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "3b0f9fdd0944a34f6bc59f9e1e3506d5bc3d705c10b81d07de26cd89e8878467",
+				"value": "",
 				"type": "string"
 			}
 		]

@@ -1,0 +1,28 @@
+{
+  "name": "cypress-example-docker-compose",
+  "version": "1.0.0",
+  "description": "Example running Cypress tests against Apache server via docker-compose",
+  "scripts": {
+    "build": "docker-compose build",
+    "up": "docker-compose up --abort-on-container-exit --exit-code-from e2e",
+    "effective:config": "circleci config process circle.yml | sed /^#/d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cypress-io/cypress-example-docker-compose.git"
+  },
+  "keywords": [
+    "cypress",
+    "cypress-io",
+    "example",
+    "docker",
+    "docker-compose"
+  ],
+  "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com> (https://glebbahmutov.com/)",
+  "license": "ISC",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/cypress-io/cypress-example-docker-compose/issues"
+  },
+  "homepage": "https://github.com/cypress-io/cypress-example-docker-compose#readme"
+}

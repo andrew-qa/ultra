@@ -1,4 +1,4 @@
-FROM cypress/base:14
+FROM cypress/browsers:node16.14.2-slim-chrome100-ff99-edge
 WORKDIR /app
 
 # dependencies will be installed only if the package files change

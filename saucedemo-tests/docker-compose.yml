@@ -1,12 +1,11 @@
 version: '3'
 services:
-  e2e:
+  e2e-chrome:
     image: cypress
     build: ./e2e
-    container_name: cypress
     environment:
       - CYPRESS_baseUrl=https://www.saucedemo.com
-    command: npx cypress run
+    command: npx cypress run --browser chrome --config-file=/app/cypress_chrome.json
     # mount the host directory e2e/cypress and the file e2e/cypress.json as
     # volumes within the container
     # this means that:
@@ -17,4 +16,14 @@ services:
     #     rebuild required).
     volumes:
       - ./e2e/cypress:/app/cypress
-      - ./e2e/cypress.json:/app/cypress.json
+      - ./e2e/cypress_chrome.json:/app/cypress_chrome.json
+  e2e-edge:
+    image: cypress
+    build: ./e2e
+    environment:
+      - CYPRESS_baseUrl=https://www.saucedemo.com
+    command: npx cypress run --browser edge --config-file=cypress_edge.json
+    volumes:
+      - ./e2e/cypress:/app/cypress
+      - ./e2e/cypress_edge.json:/app/cypress_edge.json
+

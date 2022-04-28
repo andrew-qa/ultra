@@ -1,13 +1,11 @@
-# cypress-example-docker-compose
+# Sauce Demo Cypress Tests
 
-> Example running Cypress tests against Apache server via docker-compose
+This suite is covering purchase flow on https://www.saucedemo.com/ using Cypress 
 
-[![CircleCI](https://circleci.com/gh/cypress-io/cypress-example-docker-compose.svg?style=svg)](https://circleci.com/gh/cypress-io/cypress-example-docker-compose) [![renovate-app badge][renovate-badge]][renovate-app]
+See [docker-compose.yml](docker-compose.yml) 
+second container has [Cypress tests](e2e/Dockerfile).
 
-See [docker-compose.yml](docker-compose.yml) and [circle.yml](circle.yml) files.
-First [container runs Apache](webapp/Dockerfile), second container has [Cypress tests](e2e/Dockerfile).
 
-**note:** for performance on CircleCI, I have turned [docker layer caching](https://circleci.com/docs/2.0/docker-layer-caching/) to avoid rebuilding Docker images unless they have changed.
 
 ## Use
 
@@ -16,7 +14,7 @@ First [container runs Apache](webapp/Dockerfile), second container has [Cypress 
 
 ## More info
 
-- [Cypress Docker docs](https://on.cypress.io/docker)
+- [Cypress Docker docs](https://docs.cypress.io/examples/examples/docker)
 - [Cypress continuous integration docs](https://on.cypress.io/ci)
 - [docker-compose networking](https://docs.docker.com/compose/networking/)
 - Read the excellent [End-to-End Testing Web Apps: The Painless Way](https://mtlynch.io/painless-web-app-testing/)

@@ -1,0 +1,9 @@
+{
+  "chromeWebSecurity": false,
+  "videosFolder": "/app/cypress/videos/edge",
+  "screenshotsFolder": "/app/cypress/screenshots/edge",
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "cypress/results/edge/output.xml"
+  }
+}

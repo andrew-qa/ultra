@@ -1,0 +1,9 @@
+{
+  "chromeWebSecurity": false,
+  "videosFolder": "cypress/videos/chrome",
+  "screenshotsFolder": "cypress/screenshots/chrome",
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "cypress/results/chrome/output.xml"
+  }
+}
